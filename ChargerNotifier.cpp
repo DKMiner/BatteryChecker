@@ -20,7 +20,7 @@ VOID CALLBACK TimerProc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) {
         }
 
         // Show the MessageBox every time the charger is disconnected
-        MessageBox(notificationWindow, "Charger disconnected!", "Charger Notifier", MB_OK); // | MB_ICONEXCLAMATION);
+        MessageBox(notificationWindow, "Charger disconnected!", "Charger Notifier", MB_OK | MB_TOPMOST); // | MB_ICONEXCLAMATION);
     } else {
         // Charger is connected, close the notification window
         if (notificationWindow != NULL) {
